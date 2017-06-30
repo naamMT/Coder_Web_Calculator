@@ -1,0 +1,223 @@
+@CHARSET "UTF-8";
+
+/*Joker settings for all page*/
+* {
+	margin: 0;
+	padding: 0;
+	
+	box-sizing: border-box;
+	font: bold 18px Arial, sans-serif;
+}
+
+html {
+	width: 100%;
+	height: 100%;
+	background-color: #e7fdff;
+}
+
+/*main div including all calculator*/
+.calculator {
+	float: left;
+	position: relative;
+	
+	width: 400px;
+	height: 305px;
+	
+	left: 36%;
+	top: 90px;
+		
+	background-color: #ffb3ec;
+	border-radius: 3px;
+	box-shadow: 3px 3px 3px 3px #888888;
+	
+}
+
+.ust {
+	
+	float: left;
+	overflow: hidden;
+	margin: 7px;
+	padding: 5px;
+
+}
+
+/*eraser button*/
+.clear {
+	
+	width: 75px;
+	height: 40px;
+	float: left;
+	margin-right: 10px;
+	
+	color: white;
+	background-color: #ff0000;
+	border-radius: 3px;
+	box-shadow: 3px 3px 5px #b30000;
+	
+	text-align: center;
+	line-height: 10px;
+	padding: 14px;
+	
+	cursor: pointer;
+	user-select: none;
+}
+
+/*eraser button when hover*/
+.clear:HOVER {
+
+	background-color: #ca0001;
+}
+
+/*calculator screen*/
+.screen {
+	
+	width: 285px;
+	height: 40px;
+	float: left;
+
+	border-radius: 3px;
+	background-color: #7bcac8;
+	box-shadow: inset 0px 4px rgba(0, 0, 0, 0.2);
+	
+	color: white;
+	text-align: right;
+	padding: 10px 15px;
+	font-size: 25px;
+}
+
+.buttons span{
+  
+  float: left;
+  overflow: hidden;
+  margin: 4px;
+  left: 8px;
+  
+  cursor: pointer;
+  
+  -ms-user-select: none; /*WINDOWS*/
+  -webkit-user-select: none; /*CHROME*/
+  -moz-user-select: none;/*MOZZILLA*/
+  user-select: none; /*DEFAULT MUST BE LAST*/
+}
+
+/*all buttons*/
+span{
+  
+  width: 85px;
+  height: 50px;
+  
+  position: relative;
+  border-radius: 3px;
+  overflow: hidden;
+  
+  font-size: 17px;
+  text-align: center;
+  line-height: 20px;
+  padding: 12px 10px;
+  
+  color:white;
+  background-color: #4d79ff;
+  box-shadow: 3px 3px 5px #0039e6;
+
+}
+
+/*change color of buttons when mouse comes on*/
+span:HOVER {
+	
+	background-color: #3555b5;
+}
+
+/*add some animation when buttons pressed*/
+span:ACTIVE {
+	
+	background-color: #3555b5;
+	transform: translateY(2px);
+}
+
+.operator {
+  
+  width: 95px;
+  background-color: #009999;
+  box-shadow: 3px 3px 5px #006666;
+  
+}
+
+.operator:HOVER {
+	
+	background-color: #007f7f;
+}
+
+.equals {
+	
+	background-color: #99cc00;
+  	box-shadow: 3px 3px 5px #739900;
+}
+
+.equals:HOVER {
+	
+	background-color: #77a101;
+}
+
+/*header*/
+.row p {
+	
+	position: relative;
+	left: 37%;
+	top: 70px;	
+	margin-bottom: 15px;
+	
+	font-size: 2em;
+	text-shadow: 0 0 2px #787878;
+}
+
+.lbl {
+	
+	position: relative;
+	left: 39%;
+	top: 75px;
+	margin-bottom: 25px;
+	
+	color:gray;
+	font-size: 15px;
+}
+
+/*div for live clock*/
+.clock {
+	
+	width: 250px;
+	height: 100px;
+	
+	float: left;
+	margin-top:20px;
+	margin-left: 40%;
+	
+	color: #FFFFFF;
+	background-color: #e5db3c;
+	
+	border-radius: 4px;
+	border-bottom: 5px solid maroon;
+	
+	text-shadow: 0 1px 0 #ccc,
+	 0 2px 0 #c9c9c9,
+	 0 3px 0 #bbb,
+	 0 4px 0 #b9b9b9,
+	 0 5px 0 #aaa,
+	 0 6px 1px rgba(0,0,0,.1),
+	 0 0 5px rgba(0,0,0,.1),
+	 0 1px 3px rgba(0,0,0,.3),
+	 0 3px 5px rgba(0,0,0,.2),
+	 0 5px 10px rgba(0,0,0,.25),
+	 0 10px 10px rgba(0,0,0,.2),
+	 0 20px 20px rgba(0,0,0,.15);
+	
+	text-align: center;
+	font-size: 38px;
+	font-family: Arial;
+	overflow: hidden;
+	
+	padding: 6px 10px;
+	user-select: none;
+	
+}
+
+
