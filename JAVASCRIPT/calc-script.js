@@ -2,6 +2,10 @@
  * Coder ACJHP
  * 30/06/2017
  */
+/**
+ * updated by naamMT
+ * 10/07/2017
+ */
 
 //initialize global variable.
 var screenText = "";
@@ -20,20 +24,22 @@ window.onload = function() {
     */
     for (var i = 0; i < calcKeys.length; i++) {
     	calcKeys[i].onclick = run;
-
     }
+
+    document.getElementById("bd").onkeyup = runKeys;  //  add event to body
     
     //add listener to clear button.
     clear.addEventListener("click", function(){
 	screen.innerHTML = "";
     });
+
     
     //main function that added to all buttons.
     function run(event) {
-	
+ 
 	var buttonValue = event.target.innerHTML;
 	 
-	if(buttonValue == "x") {
+	if(buttonValue == "x" ) {
 	    
 	    //first append the new button value,
 	    screen.innerHTML += buttonValue;
@@ -47,7 +53,7 @@ window.onload = function() {
 	    //and here change screen value with replaced string.
 	    screenText = regexPattern;
 
-	}else if(buttonValue == "=") {
+	}else if(buttonValue == "="  ) {
 
 	    //get result with eval() function and show it in screen.
 	    screen.innerHTML = eval(screenText);
@@ -60,8 +66,75 @@ window.onload = function() {
 	    screen.innerHTML += buttonValue;
 	    screenText += buttonValue;
 	}
-    	
+  
     }
+        // this function for key event
+    function runKeys(event) {
+	var KeyValue = event.keyCode ;
+    var Char="i";
+    switch (KeyValue)
+        {
+            case 96:
+                Char="0";
+                break;
+            case 97:
+                Char="1";
+                break;
+            case 98:
+                Char="2";
+                break;
+            case 99:
+                Char="3";
+                break;
+            case 100:
+                Char="4";
+                break;
+            case 101:
+                Char="5";
+                break;
+            case 102:
+                Char="6";
+                break;
+            case 103:
+                Char="7";
+                break;
+            case 104:
+                Char="8";
+                break;
+            case 105:
+                Char="9";
+                break;
+            case 110:
+                Char=".";
+                break;
+            case 13:
+                Char="=";
+                break;
+            case 107:
+                Char="+";
+                break;
+            case 109:
+                Char="-";
+                break;
+            case 106:
+                Char="x";
+                break;
+            case 111:     
+                Char="/";
+                break;
+            case 8:       
+                Char="C";
+                break;
+        }
+        
+    for (var i = 0; i < calcKeys.length; i++) {
+        if(calcKeys[i].innerHTML==Char)
+    	calcKeys[i].click();
+    }
+        if(clear.innerHTML == Char)
+           screen.innerHTML = "";
+    }
+   
     
 /*Clock*/    
 var startTheClock = function() {    
